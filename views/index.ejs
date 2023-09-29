@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,82 @@
   <link rel="stylesheet" href="stylesheets/style.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
   <div class="main">
-    <nav></nav>
-      <div class="left">
-          <div class="left-l">
-              <div class="left-l-part1">
-                <i class="ri-file-copy-line"></i>  
-                <i class="ri-search-line"></i>
-                <i class="ri-links-fill"></i>
-                <i class="ri-calendar-close-line"></i>
-                <i class="ri-qr-code-line"></i> 
-              </div>
-              <div class="left-l-part2">
-                <i class="ri-user-line"></i>
-                <i class="ri-settings-5-line"></i>
-              </div>
-          </div>
+    <nav>
+      <div class="nav-part1">
+        <img src="/images/VS img.png" alt="">
+        <p>File</p>
+        <p>Edit</p>
+        <p>Selection</p>
+        <p>View</p>
+        <p>Go</p>
+        <p>Run</p>
+        <p>...</p>
       </div>
-      <div class="right">
-        
+      <div class="nav-part2">
+        <i id="nav-part2-i" class="ri-side-bar-fill"></i>
+        <i id="nav-part2-i" class="ri-layout-bottom-line"></i>
+        <i id="nav-part2-i" class="ri-layout-right-line"></i>
+        <i id="nav-part2-i" class="ri-layout-2-fill"></i>
+
+        <div class="nav-cross">
+          <i id="nav-part2-i" class="ri-subtract-line"></i>
+          <i id="nav-part2-i" class="ri-checkbox-blank-line"></i>
+          <p style="font-size: 1.6vw; cursor: pointer;">X</p>
+        </div>
       </div>
+    </nav>
+    <div class="left">
+      <div class="left-l">
+        <div class="left-l-part1">
+          <i id="explorer" class="ri-file-3-line"></i>
+          <i class="ri-search-line"></i>
+          <i class="ri-git-branch-line"></i>
+          <i class="ri-bug-line"></i>
+          <i class="ri-function-line"></i>
+        </div>
+        <div class="left-l-part2">
+          <i class="ri-user-line"></i>
+          <i class="ri-settings-5-line"></i>
+        </div>
+      </div>
+      <div class="left-r">
+        <p>explorer <span>...</span></p>
+        <div class="folder-name">
+          <p>Folder Name</p>
+          <span>
+            <i id="fileicon" class="ri-add-line"></i>
+            <i id="foldericon" class="ri-folder-fill"></i>
+            <a href="/"><i id="refresh" class="ri-refresh-line"></i> </a>
+          </span>
+        </div>
+        <form class="create-file" action="/createfile" method="post">
+          <input id="input" type="text" name="filename">
+        </form>
+        <form class="create-folder" action="/createfolder" method="post">
+          <input id="input" type="text" name="foldername">
+        </form>
+        <div class="show-file-folder">
+          <% filedata.forEach((elem)=> { %>
+              <h3><% if(elem.isDirectory()){ %>
+                        <i style="color:whitesmoke;" id="checkdir" class="ri-folder-line"></i>
+                  <% } else { %>
+                        <i style="color: #44502d;" id="checkdir" class="ri-file-line"></i>
+                  <% } %>
+              <%= elem.name %></h3>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+        <form action="/update">
+          <textarea name="" id="" cols="50" rows="10"></textarea>
+        </form>
+    </div>
   </div>
+  <script src="/javascripts/script.js"></script>
 </body>
+
 </html>
