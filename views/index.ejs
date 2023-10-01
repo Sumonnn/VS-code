@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VS-code</title>
-  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
@@ -66,21 +66,30 @@
           <input id="input" type="text" name="foldername">
         </form>
         <div class="show-file-folder">
-          <% filedata.forEach((elem)=> { %>
-              <h3><% if(elem.isDirectory()){ %>
-                        <i style="color:whitesmoke;" id="checkdir" class="ri-folder-line"></i>
-                  <% } else { %>
-                        <i style="color: #44502d;" id="checkdir" class="ri-file-line"></i>
+          <% files.forEach((elem)=> { %>
+            <h3>
+              <% if(elem.isDirectory()){ %>
+                <i style="color:whitesmoke;" id="checkdir" class="ri-folder-line"></i>
+                <% } else { %>
+                  <i style="color: #44502d;" id="checkdir" class="ri-file-line"></i>
                   <% } %>
-              <%= elem.name %></h3>
-          <% }); %>
+                    <a href="/show/<%= elem.name %>">
+                      <%= elem.name %>
+                    </a>
+            </h3>
+            <% }); %>
         </div>
       </div>
     </div>
     <div class="right">
-        <form action="/update">
-          <textarea name="" id="" cols="50" rows="10"></textarea>
-        </form>
+      <div class="rnav">
+            <p class="rnav-filename"><%= filename %> <a href="/">X</a></p>
+      </div>
+      <form action="/update" method="post">
+        <textarea name="" id="" cols="50" rows="10" name="txtarea">
+            <%= fileInsidedata %>
+          </textarea>
+      </form>
     </div>
   </div>
   <script src="/javascripts/script.js"></script>
