@@ -38,4 +38,9 @@ router.get('/show/:filename',(req,res)=>{
   });
 })
 
+//delete route
+router.get('/delete/:filename',(req,res)=>{
+  fs.unlinkSync(`public/database/${req.params.filename}`);
+  res.redirect('/');
+})
 module.exports = router;

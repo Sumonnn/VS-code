@@ -158,11 +158,22 @@ input{
   border: 1px solid rgba(15, 15, 194, 0.724);
 }
 .show-file-folder{
-  padding: 0.2vw 2.5vw;
+  padding: 0.2vw 1vw;
 }
 .show-file-folder>h3{
   margin-top: 0.2vw;
   font-size: 1.5vw;
+}
+.left-filename{
+  width: 100%;
+  height: fit-content;
+}
+.filename-show-left{
+}
+
+.file-cross{
+  margin-left: 2.2vw;
+  font-size: 1.3vw;
 }
 #checkdir{
   opacity: 1;
@@ -201,4 +212,9 @@ textarea{
   font-size: 1.5vw;
   border-right: 1px solid #343333;
   color: #dbdb68;
+}
+.right-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

@@ -73,23 +73,31 @@
                 <% } else { %>
                   <i style="color: #44502d;" id="checkdir" class="ri-file-line"></i>
                   <% } %>
-                    <a href="/show/<%= elem.name %>">
-                      <%= elem.name %>
-                    </a>
+                  <span class="left-filename">
+                    <a class="filename-show-left" href="/show/<%= elem.name %>"><%= elem.name %></a>
+                    <a class="file-cross" href="/delete/<%= elem.name %>">❌</a>
+                  </span>
             </h3>
             <% }); %>
         </div>
       </div>
     </div>
     <div class="right">
-      <div class="rnav">
-            <p class="rnav-filename"><%= filename %> <a href="/">X</a></p>
-      </div>
-      <form action="/update" method="post">
-        <textarea name="" id="" cols="50" rows="10" name="txtarea">
-            <%= fileInsidedata %>
-          </textarea>
-      </form>
+      <% if(!filename && !fileInsidedata){ %>
+        <!-- <p>Files No Open</p> -->
+        <img class="right-img" src="/images/right-img.png" alt="">
+      <% }else{ %>
+          <div class="rnav">
+            <p class="rnav-filename">
+              <%= filename %> <a href="/">X</a>
+            </p>
+          </div>
+          <form action="/update" method="post">
+            <textarea name="" id="" cols="50" rows="10" name="txtarea">
+          <%= fileInsidedata %>
+        </textarea>
+          </form>
+      <% } %>
     </div>
   </div>
   <script src="/javascripts/script.js"></script>
