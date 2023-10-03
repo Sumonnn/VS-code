@@ -92,10 +92,11 @@
               <%= filename %> <a href="/">X</a>
             </p>
           </div>
-          <form action="/update" method="post">
-            <textarea name="" id="" cols="50" rows="10" name="txtarea">
-          <%= fileInsidedata %>
-        </textarea>
+          <form action="/update/<%= filename %>" method="post">
+            <textarea name="txtarea" id="" cols="50" rows="10" name="txtarea">
+           <%= fileInsidedata %>
+           </textarea>
+           <button class="btn"></button>
           </form>
       <% } %>
     </div>

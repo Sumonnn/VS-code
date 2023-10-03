@@ -1,34 +1,41 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "gilroy";
   color: #ffffff;
 }
-html,body{
+
+html,
+body {
   width: 100%;
   height: 100%;
 }
-a{
+
+a {
   text-decoration: none;
   /* font-size: 0.8vw; */
 }
-i{
+
+i {
   color: #ffffff;
   opacity: 0.5;
   font-size: 2vw;
   cursor: pointer;
 }
-p{
+
+p {
   cursor: pointer;
 }
-.main{
+
+.main {
   width: 100%;
   position: relative;
   display: flex;
   padding-top: 4vh;
 }
-nav{
+
+nav {
   width: 100%;
   height: 5vh;
   position: absolute;
@@ -40,38 +47,45 @@ nav{
   justify-content: space-between;
   padding: 0 10px;
 }
-.nav-cross{
+
+.nav-cross {
   display: flex;
   align-items: center;
   gap: 1.8vw;
   margin: 0 1.5vw;
 }
-.nav-part1{
+
+.nav-part1 {
   display: flex;
   align-items: center;
   gap: 1.3vw;
 }
-.nav-part2{
+
+.nav-part2 {
   display: flex;
   align-items: center;
   gap: 1vw;
 }
-#nav-part2-i{
-   font-size: 1.4vw;
-   opacity:1;
+
+#nav-part2-i {
+  font-size: 1.4vw;
+  opacity: 1;
 }
-.nav-part1>img{
+
+.nav-part1>img {
   width: 25px;
 }
+
 /* baki ache nav bar */
-.left{
+.left {
   width: 20%;
   height: 96vh;
   border-right: 0.21px solid #343333;
   background-color: #17181a;
   display: flex;
 }
-.left-l{
+
+.left-l {
   width: 15%;
   height: 100%;
   display: flex;
@@ -80,75 +94,88 @@ nav{
   justify-content: space-between;
   border-right: 0.21px solid #343333;
 }
-#explorer{
+
+#explorer {
   padding: 0.5vw;
   opacity: 1;
   border-left: 5px solid rgba(0, 0, 255, 0.779);
   border-radius: 5px;
 }
-.left-l-part1{
+
+.left-l-part1 {
   padding-top: 1vw;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 2.5vh;
 }
-.left-l-part2{
+
+.left-l-part2 {
   padding-bottom: 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3vh;
 }
-.left-r{
+
+.left-r {
   width: 85%;
   height: 100%;
 }
-.left-r>p{
+
+.left-r>p {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
   font-weight: 100;
   font-size: 1vw;
-  margin:1vw 1.2vw;
+  margin: 1vw 1.2vw;
 }
-.left-r p span{
+
+.left-r p span {
   font-weight: 700;
   font-size: 1.1vw;
 }
-.folder-name{
+
+.folder-name {
   width: 100%;
   height: 1.8vw;
-  padding-left:0.5vw;
+  padding-left: 0.5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid #343333;
   border-bottom: 1px solid #343333;
 }
-.folder-name span{
+
+.folder-name span {
   display: flex;
   align-items: center;
   gap: 0.5vw;
   padding-right: 1vw;
 }
-.folder-name span>i{
-   font-size: 1.5vw;
+
+.folder-name span>i {
+  font-size: 1.5vw;
 }
-form{
+
+form {
   /* display: none; */
 }
-.create-file{
+
+.create-file {
   width: 100%;
-  padding:0.3vw 0.2vw;
-  display: none; 
+  padding: 0.3vw 0.2vw;
+  display: none;
 }
-.create-folder{
+
+.create-folder {
   width: 100%;
-  padding:0.3vw 0.2vw;
-  display: none; 
+  padding: 0.3vw 0.2vw;
+  display: none;
 }
-input{
+
+input {
   width: 80%;
   height: 4vh;
   margin-left: 20%;
@@ -157,35 +184,41 @@ input{
   outline-color: royalblue;
   border: 1px solid rgba(15, 15, 194, 0.724);
 }
-.show-file-folder{
+
+.show-file-folder {
   padding: 0.2vw 1vw;
 }
-.show-file-folder>h3{
+
+.show-file-folder>h3 {
   margin-top: 0.2vw;
   font-size: 1.5vw;
 }
-.left-filename{
+
+.left-filename {
   width: 100%;
   height: fit-content;
 }
-.filename-show-left{
-}
 
-.file-cross{
+.filename-show-left {}
+
+.file-cross {
   margin-left: 2.2vw;
   font-size: 1.3vw;
 }
-#checkdir{
+
+#checkdir {
   opacity: 1;
-  font-size:1.4vw;
+  font-size: 1.4vw;
 }
-.right{
+
+.right {
   width: 80%;
   height: 96vh;
   background-color: #202124;
   overflow: hidden;
 }
-textarea{
+
+textarea {
   /* margin-top: 1vh; */
   width: 100%;
   height: 89vh;
@@ -193,7 +226,8 @@ textarea{
   border: none;
   font-size: 1.5vw;
 }
-.rnav{
+
+.rnav {
   width: 100%;
   height: 6.8vh;
   border-bottom: 1px solid #343333;
@@ -202,7 +236,8 @@ textarea{
   align-items: center;
   justify-content: flex-start;
 }
-.rnav-filename{
+
+.rnav-filename {
   width: 14%;
   height: 100%;
   display: flex;
@@ -213,8 +248,22 @@ textarea{
   border-right: 1px solid #343333;
   color: #dbdb68;
 }
-.right-img{
+
+.right-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.btn {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: 99;
+  top: 6.5%;
+  right: 5%;
+  border-top: 1px solid #17181a;
+  border-left: 10px solid #17181a;
+  border-right: 10px solid #17181a;
+  border-bottom: 15px solid #ffffff;
 }
